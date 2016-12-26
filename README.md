@@ -3,12 +3,10 @@ Arduino nRF24l01 (using RF24 library) KN protocol (WLtoys) RC-Receiver, receivin
 
 I used this lib together with the stm32duino library and a modification of RF24 library if you want to use it just with normal Arduino uncomment neccessary lines in the header file.
 
-For Arduino Uno/Nano
-
+<b>For Arduino Uno/Nano</b></br>
 https://github.com/TMRh20/RF24
 
-For STM32
 
-https://github.com/rogerclarkmelbourne/Arduino_STM32
-
+<b>For STM32</b></br>
+https://github.com/rogerclarkmelbourne/Arduino_STM32</br>
 https://github.com/chacal/rf24_stm32
