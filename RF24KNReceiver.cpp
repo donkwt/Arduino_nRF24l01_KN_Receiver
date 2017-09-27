@@ -68,10 +68,11 @@ bool RF24KNReceiver::bind()
       radio.closeReadingPipe(0);
       conn_speed == 1 ? radio.setDataRate(RF24_1MBPS) : radio.setDataRate(RF24_250KBPS);
       radio.setChannel(channels[current_channel]);
+      delay(10);
       radio.openReadingPipe(1, operation_addr);  // 0x4b41000300
       radio.startListening();
 
-      tries_receive = -5000 ;
+      tries_receive = -5000;
       return true;
     }
   }
@@ -106,6 +107,7 @@ bool RF24KNReceiver::receive()
         radio.closeReadingPipe(1);
         current_channel >= 3 ? current_channel = 0 : current_channel++;
         radio.setChannel(channels[current_channel]);
+        delay_us(7);
         radio.openReadingPipe(1, operation_addr);
         radio.startListening();
       }
